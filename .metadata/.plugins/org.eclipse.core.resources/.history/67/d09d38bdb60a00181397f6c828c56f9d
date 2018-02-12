@@ -1,0 +1,20 @@
+package com.luv2code.springdemo;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class SetterDemoApp {
+
+	public static void main(String[] args) {
+		//load spring configuration file
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext");
+		
+		//call beans
+		Coac theCoach = context.getBean("myCricketCoach",CricketCoach.class)
+		
+		//use beans
+		
+		//close context
+
+	}
+
+}
