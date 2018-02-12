@@ -7,21 +7,28 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<!-- load properties file -->
+	<context:property-placeholder location="classpath:sport.properties"/>
+	
 	
     <!-- Define your beans here -->
     
     <!-- define the dependency -->
-    <bean id="myFortune" class="com.luv2code.springdemo.HappyFortuneService"></bean>
+    <bean id="myHappyFortune" class="com.luv2code.springdemo.HappyFortuneService"></bean>
+    
+    <bean id="myRandomFortune" class="com.luv2code.springdemo.RandomFortuneService"/>
     
     <!-- cricketCoach bean  -->
     <bean id="myCricketCoach" class="com.luv2code.springdemo.CricketCoach">
     
     	<!-- setup setter injection -->
-    	<property name="fortuneService" ref="myFortune"/>
+    	<property name="fortuneService" ref="myHappyFortune"/>
+    	
+    	<property name="randomFortuneService" ref="myRandomFortune"/>
     	
     	<!-- inject literal values -->
-    	<property name="email" value="cricketCoachEmail@test.com"></property>
-    	<property name="team" value="Team name for Cricket"/>
+    	<property name="email" value="${foo.email}"></property>
+    	<property name="team" value="${foo.name}"/>
     	
     </bean>
     
@@ -29,7 +36,7 @@
     <bean id="myCoach" class = "com.luv2code.springdemo.TrackCoach">
     
     	<!-- setup constructor injection -->
-    	<constructor-arg ref="myFortune" />
+    	<constructor-arg ref="myHappyFortune" />
     	
     </bean>
         

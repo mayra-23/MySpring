@@ -3,6 +3,7 @@ package com.luv2code.springdemo;
 public class CricketCoach implements Coach {
 	
 	private FortuneService fortuneService;
+	private FortuneService randomFortuneService;
 	private String email;
 	private String team;
 	
@@ -18,7 +19,8 @@ public class CricketCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {		
-		return "cricket fortune " + fortuneService.getFortune();
+		//return "Cricket fortune " + fortuneService.getFortune();
+		return "Cricket "+ randomFortuneService.getFortune();
 	}
 	
 	public void setFortuneService(FortuneService fortuneService) {
@@ -42,6 +44,15 @@ public class CricketCoach implements Coach {
 
 	public String getTeam() {
 		return team;
+	}
+	
+	public FortuneService getRandomFortuneService() {
+		return randomFortuneService;
+	}
+
+	public void setRandomFortuneService(FortuneService randomFortuneService) {
+		System.out.println("Setting random fortune");
+		this.randomFortuneService = randomFortuneService;
 	}
 
 }
