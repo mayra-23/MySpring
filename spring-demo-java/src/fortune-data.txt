@@ -1,0 +1,4 @@
+fortune-data-txt1
+fortune-data-txt2
+fortune-data-txt3
+fortune-data-txt4
