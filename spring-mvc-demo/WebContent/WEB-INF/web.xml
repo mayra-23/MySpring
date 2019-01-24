@@ -9,6 +9,7 @@
 	<!-- Spring MVC Configs -->
 
 	<!-- Step 1: Configure Spring MVC Dispatcher Servlet -->
+
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -24,5 +25,8 @@
 		<servlet-name>dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	<absolute-ordering>
+	<name>spring_web</name>
+	</absolute-ordering>
 	
 </web-app>

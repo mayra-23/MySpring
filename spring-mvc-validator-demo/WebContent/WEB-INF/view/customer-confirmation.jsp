@@ -7,6 +7,6 @@
 <title>Customer Confirmation</title>
 </head>
 <body>
-	Hello Customer <b> ${student.firstName} ${student.lastName}</b> from <b>${student.country}</b>
+	Hello Customer <b> ${customer.firstName} ${customer.lastName}</b> 
 </body>
 </html>

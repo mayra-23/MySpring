@@ -20,4 +20,7 @@
 		<servlet-name>dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	<absolute-ordering>
+		<name>spring_web</name>
+	</absolute-ordering>
 </web-app>
